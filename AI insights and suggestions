@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduFocus Report</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+        :root {
+            --brand-color: #4A90E2; 
+            --light-background: #F8F9FA;
+            --card-background: #FFFFFF;
+            --text-primary: #333333;
+            --text-secondary: #5F6368;
+            --border-color: #E0E0E0;
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: var(--light-background);
+            color: var(--text-primary);
+        }
+        .suggestion-card {
+            @apply bg-[var(--card-background)] border border-[var(--border-color)] rounded-xl p-6 flex items-center gap-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+        }
+        .action-button {
+            @apply w-full sm:w-auto flex items-center justify-center gap-3 rounded-lg h-12 px-8 text-base font-bold transition-all;
+        }
+        .primary-button {
+            @apply action-button bg-[var(--brand-color)] text-white shadow-md hover:bg-blue-600;
+        }
+        .secondary-button {
+            @apply action-button bg-white text-[var(--text-secondary)] border border-[var(--border-color)] shadow-sm hover:bg-gray-50;
+        }
+    </style>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+</head>
+<body class="antialiased">
+<div class="relative flex size-full min-h-screen flex-col bg-[var(--light-background)] group/design-root overflow-x-hidden">
+<header class="sticky top-0 z-10 w-full bg-white/80 backdrop-blur-md border-b border-[var(--border-color)]">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center gap-4">
+<div class="text-[var(--brand-color)] size-8">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-[var(--text-primary)]">EduFocus</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-white shadow-sm" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBrubDVJ5f9Mj4UzCn9MdIaEqYztvoUlzVvSr9GJR10VCu45gyIhcg5bgHXNVr3ZQZMKvWHB0fhmC_825an9WWQYogq1ZTER4jY-aJVvxbDwgexRBFxxOrSlGqPPLuZ_Q0RHMFmy91eXDVVxzzGidVbJcZt61H8zc-QX_nMiFTwuQfUnuZBMDdKGeEV86aUrSxLBUvccY4Ke1n-DW9Zv7MLkf3zAO-MrH_U5RJsnNCe2HzAchh8eeIiGN0GNJg6LwJD1tat3loZXjTM");'></div>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-12">
+<h1 class="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] tracking-tight">Your Assistant's Insights</h1>
+<p class="text-lg text-[var(--text-secondary)] mt-3 max-w-2xl mx-auto">Here are some AI-powered suggestions to help your students thrive in Algebra I.</p>
+</div>
+<div class="space-y-6">
+<div class="suggestion-card">
+<div class="flex-shrink-0 size-12 bg-blue-100 text-[var(--brand-color)] rounded-full flex items-center justify-center">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Focus on fractions → <span class="text-red-500">80% error rate</span></h3>
+<p class="text-base text-[var(--text-secondary)] mt-1">This is a key area for improvement. Reinforcing the fundamentals can build a stronger foundation for more complex topics.</p>
+</div>
+</div>
+<div class="suggestion-card">
+<div class="flex-shrink-0 size-12 bg-green-100 text-green-500 rounded-full flex items-center justify-center">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.284-1.255-.778-1.664M6 18c0-1.105.895-2 2-2h8c1.105 0 2 .895 2 2v2H6v-2zM12 11a4 4 0 100-8 4 4 0 000 8z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Group struggling students</h3>
+<p class="text-base text-[var(--text-secondary)] mt-1">Encourage peer-to-peer learning by forming small, collaborative study groups. This can boost confidence and understanding.</p>
+</div>
+</div>
+<div class="suggestion-card">
+<div class="flex-shrink-0 size-12 bg-purple-100 text-purple-500 rounded-full flex items-center justify-center">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="flex-1">
+<h3 class="text-lg font-semibold text-[var(--text-primary)]">Try real-world problem exercises</h3>
+<p class="text-base text-[var(--text-secondary)] mt-1">Connect abstract algebraic concepts to practical, everyday scenarios to make learning more engaging and relatable.</p>
+</div>
+</div>
+</div>
+<div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="primary-button">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Download PDF</span>
+</button>
+<button class="secondary-button">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span>Email to Parents</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
