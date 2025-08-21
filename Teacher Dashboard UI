@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Lexend%3Awght%40400%3B500%3B600%3B700&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>EduPlan Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+    :root {
+      --primary-color: #1994e6;
+      --primary-hover-color: #157acb;
+      --background-color: #f7f9fc;
+      --card-background-color: #ffffff;
+      --text-primary: #1a202c;
+      --text-secondary: #718096;
+      --border-color: #e2e8f0;
+      --success-color: #38a169;
+      --danger-color: #e53e3e;
+    }
+    body {
+      font-family: 'Lexend', 'Noto Sans', sans-serif;
+    }
+  </style>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+</head>
+<body class="bg-[var(--background-color)]">
+<div class="flex min-h-screen">
+<aside class="w-64 bg-white shadow-md flex-shrink-0">
+<div class="p-6">
+<h1 class="text-2xl font-bold text-[var(--primary-color)]">EduPlan</h1>
+</div>
+<nav class="mt-6">
+<a class="flex items-center px-6 py-3 text-[var(--primary-color)] bg-blue-50" href="#">
+<span class="material-symbols-outlined mr-4">
+            dashboard
+          </span>
+<span class="font-semibold">Dashboard</span>
+</a>
+<a class="flex items-center px-6 py-3 text-[var(--text-secondary)] hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined mr-4">
+            menu_book
+          </span>
+<span>Lessons</span>
+</a>
+<a class="flex items-center px-6 py-3 text-[var(--text-secondary)] hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined mr-4">
+            assessment
+          </span>
+<span>Assessments</span>
+</a>
+<a class="flex items-center px-6 py-3 text-[var(--text-secondary)] hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined mr-4">
+            groups
+          </span>
+<span>Students</span>
+</a>
+<a class="flex items-center px-6 py-3 text-[var(--text-secondary)] hover:bg-gray-100" href="#">
+<span class="material-symbols-outlined mr-4">
+            settings
+          </span>
+<span>Settings</span>
+</a>
+</nav>
+</aside>
+<main class="flex-1 p-8">
+<h2 class="text-3xl font-bold text-[var(--text-primary)] mb-8">Dashboard</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+<div class="bg-[var(--card-background-color)] p-6 rounded-lg shadow-sm flex items-center">
+<div class="p-3 bg-blue-100 rounded-full mr-4">
+<span class="material-symbols-outlined text-3xl text-[var(--primary-color)]">
+               upcoming
+             </span>
+</div>
+<div>
+<p class="text-[var(--text-secondary)] text-sm">Upcoming Lessons</p>
+<p class="text-2xl font-bold text-[var(--text-primary)]">3</p>
+</div>
+</div>
+<div class="bg-[var(--card-background-color)] p-6 rounded-lg shadow-sm flex items-center">
+<div class="p-3 bg-green-100 rounded-full mr-4">
+<span class="material-symbols-outlined text-3xl text-[var(--success-color)]">
+              quiz
+            </span>
+</div>
+<div>
+<p class="text-[var(--text-secondary)] text-sm">Recent Quizzes</p>
+<p class="text-2xl font-bold text-[var(--text-primary)]">2</p>
+</div>
+</div>
+<div class="bg-[var(--card-background-color)] p-6 rounded-lg shadow-sm flex items-center">
+<div class="p-3 bg-purple-100 rounded-full mr-4">
+<span class="material-symbols-outlined text-3xl text-purple-500">
+              trending_up
+            </span>
+</div>
+<div>
+<p class="text-[var(--text-secondary)] text-sm">Class Performance</p>
+<p class="text-2xl font-bold text-[var(--text-primary)]">85%</p>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-2xl font-semibold text-[var(--text-primary)] mb-6">Quick Actions</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-[var(--card-background-color)] rounded-lg shadow-sm overflow-hidden group">
+<div class="p-6 flex flex-col items-center text-center">
+<div class="p-4 bg-blue-50 rounded-full mb-4 group-hover:bg-[var(--primary-color)] transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-[var(--primary-color)] group-hover:text-white">
+                      edit_document
+                  </span>
+</div>
+<p class="text-lg font-semibold text-[var(--text-primary)]">Create Lesson Plan</p>
+<p class="text-[var(--text-secondary)] text-sm mt-1">Start a new lesson plan</p>
+</div>
+</div>
+<div class="bg-[var(--card-background-color)] rounded-lg shadow-sm overflow-hidden group">
+<div class="p-6 flex flex-col items-center text-center">
+<div class="p-4 bg-green-50 rounded-full mb-4 group-hover:bg-[var(--success-color)] transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-[var(--success-color)] group-hover:text-white">
+                      add_task
+                 </span>
+</div>
+<p class="text-lg font-semibold text-[var(--text-primary)]">Generate Quiz</p>
+<p class="text-[var(--text-secondary)] text-sm mt-1">Create a new quiz</p>
+</div>
+</div>
+<div class="bg-[var(--card-background-color)] rounded-lg shadow-sm overflow-hidden group">
+<div class="p-6 flex flex-col items-center text-center">
+<div class="p-4 bg-purple-50 rounded-full mb-4 group-hover:bg-purple-500 transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-purple-500 group-hover:text-white">
+                    analytics
+                </span>
+</div>
+<p class="text-lg font-semibold text-[var(--text-primary)]">Student Analytics</p>
+<p class="text-[var(--text-secondary)] text-sm mt-1">View student performance</p>
+</div>
+</div>
+<div class="bg-[var(--card-background-color)] rounded-lg shadow-sm overflow-hidden group">
+<div class="p-6 flex flex-col items-center text-center">
+<div class="p-4 bg-red-50 rounded-full mb-4 group-hover:bg-[var(--danger-color)] transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl text-[var(--danger-color)] group-hover:text-white">
+                      summarize
+                  </span>
+</div>
+<p class="text-lg font-semibold text-[var(--text-primary)]">Reports</p>
+<p class="text-[var(--text-secondary)] text-sm mt-1">Generate reports</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
