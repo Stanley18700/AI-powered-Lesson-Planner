@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<title>EduPlan AI Lesson Planner</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #1994e6;
+        --primary-hover-color: #147ac2;
+        --secondary-color: #f0f3f4;
+        --secondary-hover-color: #e5e9eb;
+        --text-primary: #111518;
+        --text-secondary: #637988;
+        --border-color: #dce1e5;
+        --background-color: #ffffff;
+      }
+      body {
+        font-family: "Lexend", sans-serif;
+      }
+      .btn {
+        @apply flex items-center justify-center rounded-md h-10 px-4 text-sm font-semibold tracking-wide transition-colors;
+      }
+      .btn-primary {
+        @apply bg-[var(--primary-color)] text-white hover:bg-[var(--primary-hover-color)];
+      }
+      .btn-secondary {
+        @apply bg-[var(--secondary-color)] text-[var(--text-primary)] hover:bg-[var(--secondary-hover-color)];
+      }
+      .form-input {
+        @apply w-full rounded-md border-[var(--border-color)] bg-[var(--background-color)] text-base text-[var(--text-primary)] placeholder:text-[var(--text-secondary)] focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)];
+      }
+      .form-select {
+        @apply form-input;
+      }
+      .form-textarea {
+        @apply form-input;
+      }
+      .card {
+        @apply bg-white rounded-lg border border-[var(--border-color)] p-6;
+      }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+<div class="flex min-h-screen flex-col">
+<header class="sticky top-0 z-10 flex h-16 items-center justify-between border-b border-[var(--border-color)] bg-white px-6">
+<div class="flex items-center gap-4">
+<div class="text-[var(--primary-color)]">
+<svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5v-4.5H8l4-6v4.5h3l-4 6z"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold text-gray-900">EduPlan</h1>
+</div>
+<nav class="hidden items-center gap-6 md:flex">
+<a class="text-sm font-medium text-gray-600 hover:text-gray-900" href="#">Dashboard</a>
+<a class="text-sm font-medium text-gray-600 hover:text-gray-900" href="#">My Lessons</a>
+<a class="text-sm font-medium text-gray-600 hover:text-gray-900" href="#">Resources</a>
+<a class="text-sm font-medium text-gray-600 hover:text-gray-900" href="#">Community</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="btn btn-secondary h-10 w-10 p-0">
+<span class="material-icons text-xl">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuApdZwULubrY3FdJZqp0t2QiAFANO8va3daVY4CPmoDZwX87TkrWYhXNrXeI5mokiRwwkHXWXnG5V9g2XLvXsf-CgAoT_KdYK0iIu_nUsRawOlW9cKwatX8K-Z8xPO6KuSzFCxg4aXDbHw_Q0YaS7RibrMGk6SNtUoQQsMV_eFe2y91AkoUV3JS5p5HN-kW_WSPVkChLZS2CTFET4t5K21jrgctXeWtatyg_fiX9DbSVs8bRhbW7aKj-_N5khva1c7wL6diRlffUl6d");'></div>
+</div>
+</header>
+<main class="flex-1 bg-gray-50 p-6 lg:p-8">
+<div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-3">
+<div class="lg:col-span-1">
+<div class="card space-y-6">
+<h2 class="text-2xl font-bold text-gray-900">Create a Lesson Plan</h2>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+<div class="col-span-2 sm:col-span-1">
+<label class="block text-sm font-medium text-gray-700" for="subject">Subject</label>
+<select class="form-select mt-1" id="subject" name="subject">
+<option>Mathematics</option>
+<option>Science</option>
+<option>History</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="grade-level">Grade Level</label>
+<select class="form-select mt-1" id="grade-level" name="grade-level">
+<option>5th Grade</option>
+<option>6th Grade</option>
+<option>7th Grade</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+<div class="col-span-2 sm:col-span-1">
+<label class="block text-sm font-medium text-gray-700" for="time-duration">Time Duration</label>
+<select class="form-select mt-1" id="time-duration" name="time-duration">
+<option>45 minutes</option>
+<option>60 minutes</option>
+<option>90 minutes</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="topic">Topic</label>
+<input class="form-input mt-1" id="topic" name="topic" placeholder="e.g., Photosynthesis" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700" for="description">Describe your lesson topic...</label>
+<textarea class="form-textarea mt-1" id="description" name="description" placeholder="Provide details about the core concepts, objectives, and any specific activities you have in mind." rows="5"></textarea>
+</div>
+<button class="btn btn-primary w-full justify-center">
+<span class="material-icons mr-2">auto_awesome</span>
+                Generate
+              </button>
+</div>
+</div>
+<div class="lg:col-span-2">
+<div class="card space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold text-gray-900">AI-Generated Lesson Plan</h2>
+<button class="btn btn-secondary">
+<span class="material-icons mr-2">edit</span>
+                    Edit
+                </button>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-semibold text-gray-800">Introduction</h3>
+<div class="prose max-w-none rounded-md border border-gray-200 bg-gray-50 p-4 text-gray-700">
+<p>Start with an engaging question to spark curiosity. Briefly introduce the concept of photosynthesis and its importance for life on Earth. State the learning objectives for the lesson.</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-semibold text-gray-800">Activity</h3>
+<div class="prose max-w-none rounded-md border border-gray-200 bg-gray-50 p-4 text-gray-700">
+<p>Students will watch a short video explaining the process of photosynthesis. Following the video, they will work in small groups to create a diagram illustrating the key components: sunlight, water, carbon dioxide, chlorophyll, glucose, and oxygen.</p>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="text-lg font-semibold text-gray-800">Wrap-up</h3>
+<div class="prose max-w-none rounded-md border border-gray-200 bg-gray-50 p-4 text-gray-700">
+<p>Recap the main points of the lesson. Ask students to share their diagrams and explain one new thing they learned. Conclude with a quick quiz or exit ticket to assess understanding.</p>
+</div>
+</div>
+<div class="flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-6 sm:flex-row">
+<div class="flex gap-2">
+<button class="btn btn-primary">
+<span class="material-icons mr-2">save</span>
+                        Save
+                    </button>
+<button class="btn btn-secondary">
+<span class="material-icons mr-2">picture_as_pdf</span>
+                        Export PDF
+                    </button>
+</div>
+<button class="btn btn-secondary">
+<span class="material-icons mr-2">school</span>
+                    Export to Classroom
+                </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
